@@ -1,143 +1,213 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-<style>
-    * {box-sizing: border-box;}
-
-    body { 
-      margin: 0;
-      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #f1f1f1;
-      padding: 10px 20px;
-    }
-
-    .header .imgcontainer {
-      margin-right: 20px;
-    }
-
-    .header img {
-      width: 100px;
-      height: auto;
-      object-fit: contain;
-      /* Optional: Adjust positioning if needed */
-    }
-
-    .header a {
-      color: black;
-      text-align: center;
-      padding: 12px;
-      text-decoration: none;
-      font-size: 18px;
-      line-height: 25px;
-      border-radius: 4px;
-      margin-right: 10px;
-    }
-
-    .header a.logo {
-      font-size: 25px;
-      font-weight: bolder;
-    }
-
-    .header a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .header a.active {
-      background-color: green;
-      color: white;
-    }
-
-    @media screen and (max-width: 500px) {
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .header a {
-        display: block;
-        text-align: left;
-        margin: 5px 0;
-      }
-    }
-
-    div.gallery {
-      margin: 15px;
-      border: 1px solid #ccc;
-      float: left;
-      width: 180px;
-    }
-
-    div.gallery:hover {
-      border: 1px solid #777;
-    }
-
-    div.gallery img {
-      width: 100%;
-      height: auto;
-    }
-
-    div.desc {
-      padding: 15px;
-      text-align: center;
-    }
-</style>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-image: url("corn43.jpg");
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+        }
+        
+        .header .imgcontainer {
+            margin-right: 20px;
+        }
+        
+        .header img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+            /* Optional: Adjust positioning if needed */
+        }
+        
+        .header a {
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        
+        .header a.logo {
+            font-size: 25px;
+            font-weight: bolder;
+        }
+        
+        .header a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .header a.active {
+            background-color: green;
+            color: white;
+        }
+        
+        @media screen and (max-width: 500px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header a {
+                display: block;
+                text-align: left;
+                margin: 5px 0;
+            }
+        }
+        
+        div.gallery {
+            margin: 22px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 250px;
+        }
+        
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+        
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            background-color: orange;
+            text-align: center;
+            padding: 12px 14px;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body>
-
 <div class="header">
-  <div class="imgcontainer">
-    <img src="corn8.jpeg" alt="Logo">
-  </div>
-  <div>
-    <a href="index.html">HOME</a>
-    <a href="brands.html">OUR BRANDS</a>
-    <a class="active" href="brands.html">PRODUCT GALLERY</a>
-    <a href="about.html">ABOUT</a>
-    <a href="contact.html">CONTACTS</a>
-  </div>                                                                                                                                                                  
+    <div class="imgcontainer">
+        <img src="corn8.jpeg" alt="Logo">
+    </div>
+    <div>
+        <a href="index.html">HOME</a>
+        <a href="brands.html">OUR BRANDS</a>
+        <a class="active" href="gallery.html">PRODUCT GALLERY</a>
+        <a href="about.html">ABOUT</a>
+        <a href="contact.html">CONTACTS</a>
+    </div>
+</div>
+<div class="topnav" style="background-color:darkorange;padding: 12px 14px;">
+    <center><b>Our Gallery</b></center>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="corn12.jpg">
-    <img src="corn12.jpg" alt="corn12.jpg" width="600" height="400">
-  </a>
-  <div class="desc">ORYX Premium flour 1kg</div>
+    <a target="_blank" href="corn39.jpg">
+        <img src="corn39.jpg" alt="corn39.jpg" width="600" height="500">
+    </a>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="corn13.jpg">
-    <img src="corn13.jpg" alt="corn13.jpg" width="600" height="400">
-  </a>
-  <div class="desc">ORYX Premium flour 2kg</div>
+    <a target="_blank" href="corn33.jpg">
+        <img src="corn33.jpg" alt="corn33.jpg" width="800" height="500">
+    </a>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="corn14.jpg">
-    <img src="corn14.jpg" alt="corn14.jpg" width="600" height="400">
-  </a>
-  <div class="desc">TAHIDI sifted maize flour 1kg</div>
+    <a target="_blank" href="corn34.jpg">
+        <img src="corn34.jpg" alt="corn34.jpg" width="800" height="500">
+    </a>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="corn15.jpg">
-    <img src="corn15.jpg" alt="corn15.jpg" width="600" height="400">
-  </a>
-  <div class="desc">TAHIDI sifted maize flour 2kg</div>
+    <a target="_blank" href="corn15.jpg">
+        <img src="corn15.jpg" alt="corn15.jpg" width="800" height="500">
+    </a>
 </div>
 
 <div class="gallery">
-  <a target="_blank" href="corn20.jpg">
-    <img src="corn20.jpg" alt="corn20.jpg" width="600" height="400">
-  </a>
-  <div class="desc">ORYX Premium flour 5kg</div>
+    <a target="_blank" href="corn20.jpg">
+        <img src="corn20.jpg" alt="corn20.jpg" width="600" height="400">
+    </a>
 </div>
+<div class="gallery">
+    <a target="_blank" href="corn41.jpg">
+        <img src="corn41.jpg" alt="corn41.jpg" width="600" height="400">
+    </a>
+
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn30.jpg">
+        <img src="corn30.jpg" alt="corn30.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn31.jpg">
+        <img src="corn31.jpg" alt="corn31.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn40.jpg">
+        <img src="corn40.jpg" alt="corn40.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn37.jpg">
+        <img src="corn37.jpg" alt="corn37.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn38.jpg">
+        <img src="corn38.jpg" alt="corn38.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn12.jpg">
+        <img src="corn12.jpg" alt="corn12.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn32.jpg">
+        <img src="corn32.jpg" alt="corn15.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn13.jpg">
+        <img src="corn13.jpg" alt="corn13.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn14.jpg">
+        <img src="corn14.jpg" alt="corn14.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn35.jpg">
+        <img src="corn35.jpg" alt="corn35.jpg" width="600" height="400">
+    </a>
+</div>
+<div class="gallery">
+    <a target="_blank" href="corn36.jpg">
+        <img src="corn36.jpg" alt="corn36.jpg" width="600" height="400">
+    </a>
+</div>
+
 
 </body>
+
 </html>
