@@ -1,24 +1,182 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
     <style>
-        * {
-            box-sizing: border-box;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: whitesmoke;
         }
         
-        body {
+        .top-banner {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
             margin: 0;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            background-image: url("");
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .contact {
+            display: flex;
+            padding: 50px;
+        }
+        
+        .contact .image {
+            flex: 1;
+        }
+        
+        .contact .image img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .contact .form-container {
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .contact h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .contact p {
+            margin-bottom: 20px;
+        }
+        
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            color: green;
+        }
+        
+        .contact form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .contact form input,
+        .contact form textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        
+        .contact form button {
+            padding: 10px;
+            border: none;
+            background-color: green;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        footer {
+            color: green;
+            padding: 20px;
+            background-color: black;
+        }
+        
+        .footer-content {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-content form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: green;
+        }
+        
+        .footer-content input {
+            padding: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .footer-content button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: darkorange;
+            color: green;
+            cursor: pointer;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: green;
+        }
+        
+        .footer-links div {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h5 {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            text-decoration: none;
+            color: olive;
+        }
+        
+        footer p {
+            text-align: center;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 14px;
         }
         
         .header {
-            overflow: hidden;
-            background-color: #f1f1f1;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            background-color: #f1f1f1;
             padding: 10px 20px;
         }
         
@@ -34,20 +192,19 @@
         }
         
         .header a {
-            float: left;
-            color: black;
+            color: green;
             text-align: center;
-            padding: 12px;
+            padding: 5px;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 12px;
             line-height: 25px;
             border-radius: 4px;
-            font-weight: bold;
+            margin-right: 5px;
         }
         
         .header a.logo {
             font-size: 25px;
-            font-weight: bold;
+            font-weight: bolder;
         }
         
         .header a:hover {
@@ -60,93 +217,44 @@
             color: white;
         }
         
-        .header-right {
-            float: right;
-        }
-        
         @media screen and (max-width: 500px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
             .header a {
-                float: none;
                 display: block;
                 text-align: left;
-            }
-            .header-right {
-                float: none;
+                margin: 5px 0;
             }
         }
         
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
+        h1,
+        h2 {
+            font-weight: bold;
             text-align: center;
         }
-        /* Bordered form */
         
-        form {
-            border: 3px solid #f1f1f1;
-        }
-        /* Full-width inputs */
-        
-        input[type=text],
-        input[type=tel] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        /* Set a style for all buttons */
-        
-        button {
-            background-color: green;
-            color: black;
-            padding: 14px 10px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-        /* Add a hover effect for buttons */
-        
-        button:hover {
-            opacity: 0.8;
-        }
-        
-        .column {
-            float: left;
-            width: 50%;
-            padding: 10px;
-            height: 500px;
-            font-style: courier;
-        }
-        
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+        body {
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         
         .column2 {
-            float: left;
-            width: 33%;
-            padding: 10px;
-            height: 200px;
-            font-style: courier;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
         }
         
         .row2:after {
             content: "";
-            display: table;
-            clear: both;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
         }
     </style>
 </head>
-<center>
+<section>
     <div class="header">
         <div class="imgcontainer">
             <img src="corn8.jpeg" alt="Logo">
@@ -154,74 +262,124 @@
         <div class="header-right">
             <a href="index.html">HOME</a>
             <a href="brands.html">OUR BRANDS</a>
-            <a href="gallery.html">PRODUCT GALLERY</a>
+            <a href="gallery.html">PRODUCTS GALLERY</a>
             <a class="active" href="contact.html">CONTACTS</a>
             <a href="about.html">ABOUT</a>
         </div>
     </div>
     <div class="topnav" style="background-color:black; padding: 12px 14px; color: green;text-align:center;">
-        Reach Out To Us
+        Get In Touch
     </div>
-    <br><br></div>
-    <img src="corn51.jpg" alt="corn51.jpg" width="1220" height="400">
-    <div class="row">
-        <div class="column" style="background-color:white;">
-            <form action="action_page.php" method="post">
-                <div class="container">
-                    <h2>Get intouch with us</h2>
-                    <label for="uname"><b>Enter Name:         </b></label>
-                    <input type="text" placeholder="Enter Name  " name="uname" required><br><br>
-
-                    <label for="email"><b>Email Address:      </b></label>
-                    <input type="text" placeholder="Enter Email Address" name="email" required><br><br>
-
-                    <label for="email"><b>Enter Mobile Number:</b></label>
-                    <input type="tel" placeholder="Enter Mobile Number" name="tel" required>
-                    <div class="row cf-ro">
-                        <label for="message"><b>Enter  Message:</b></label>
-                        <div class="col-sm-8">
-                            <textarea rows="5" placeholder="Enter Your Message" class="form-control input-sm" name="description" required></textarea>
-                        </div>
-                        <button type="submit">SUBMIT</button>
-                    </div>
-                </div>
+    <header>
+        <h1 style="font-size:40px; color:green;">GOT A QUESTION ABOUT OUR PRODUCTS?</h1>
+        <p style="color:green; text-align:center;">We'd love to hear from you!Whether you have a question about our products or just whant to provide feedback,feel free to reach out to us.</p>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="image">
+                <img src="corn12.jpg" alt="Contact Image">
+            </div>
+            <div class="form-container">
+                <h1 style="color:black">GET IN touch</h1>
+                <p style="color:green">For press inquiries email <a href="mailto:kilimambogomillers@gmail.com">kilimambogomillers@gmail.com</a>.</p>
+                <p style="color:green">For general inquiries please fill out the form below and someone will contact you within 24-48 hours.</p>
+                <form action="submit_form_url" method="POST">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <section>
+        <div class="row2">
+            <div class="column2" style="background-color:green;">
+                <center>
+                    <h2>Phone Number</h2>
+                </center>
+                <center>
+                    <p>+254790272858</p>
+                </center>
+                <center>
+                    <p>+254778556838</p>
+                </center>
+            </div>
+            <div class="column2" style="background-color:green;">
+                <center><b><h2>Office Address</h2></b></center>
+                <center>
+                    <p>P.O BOX 2898-</p>
+                </center>
+                <center>
+                    <p>-01000,THIKA</p>
+                </center>
+                <p></p>
+            </div>
+            <div class="column2" style="background-color:green;">
+                <center><b><h2>Email Address</h2></b></center>
+                <center>
+                    <p>kilimambogomillers@gmail.com</p>
+                </center>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <h4>Sign Up </h4>
+            <form>
+                <input type="email" placeholder="mailto@youremail.com">
+                <button type="submit">Subscribe</button>
             </form>
         </div>
-        <div class="column" style="background-color:white;">
-            <img src="corn21.jpg" width="600" height="500">
+        <div class="footer-links">
+            <div>
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Service</h5>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5>Social Media</h5>
+                <ul>
+                    <li><a href="#">FaceBook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Linked In</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style>Reach Out To Us</h5>
+                <ul>
+                    <li><a href="#">Telephone</a></li>
+                    <li><a href="#">Email</a></li>
+
+                </ul>
+            </div>
         </div>
-    </div>
-    <!--column2 starts here-->
-    <div class="row2">
-        <div class="column2" style="background-color:#d0f0c0;">
-            <center>
-                <h2>Phone Number</h2>
-            </center>
-            <center>
-                <p>+254790272858</p>
-            </center>
-            <center>
-                <p>+254778556838</p>
-            </center>
-        </div>
-        <div class="column2" style="background-color:#d0f0c0;">
-            <center><b><h2>Office Address</h2></b></center>
-            <center>
-                <p>P.O BOX 2898-</p>
-            </center>
-            <center>
-                <p>-01000,THIKA</p>
-            </center>
-            <p></p>
-        </div>
-        <div class="column2" style="background-color:#d0f0c0;">
-            <center><b><h2>Email Address</h2></b></center>
-            <center>
-                <p>kilimambogomillers@gmail.com</p>
-            </center>
-        </div>
-    </div>
-    <footer>
-        <p>&copy;2024 -Kilimambogo Millers Ltd -All Rights Reserved -Terms & Conditions</p>
-        </p>
+        <p>&copy; 2024-KML | All Right Reserved</p>
     </footer>
