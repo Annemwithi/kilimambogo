@@ -1,7 +1,74 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            background-color: whitesmoke;
+        }
+        
+        header,
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .card h2 {
+            font: size 0.5em;
+            margin: 5px 0;
+        }
+        
+        .card p {
+            padding: 0px;
+            color: #666;
+        }
+        
+        .card a {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        
+        .card a:hover {
+            background-color: #0056b3;
+        }
+        
         * {
             box-sizing: border-box;
         }
@@ -20,7 +87,7 @@
         }
         
         .header .imgcontainer {
-            margin-right: 20px;
+            margin-right: 10px;
         }
         
         .header img {
@@ -31,7 +98,7 @@
         }
         
         .header a {
-            color: black;
+            color: green;
             text-align: center;
             padding: 12px;
             text-decoration: none;
@@ -68,50 +135,100 @@
             }
         }
         
-        div.gallery {
-            margin: 22px;
-            border: 1px solid #ccc;
-            float: left;
-            width: 250px;
-        }
-        
-        div.gallery:hover {
-            border: 1px solid #777;
-        }
-        
-        div.gallery img {
-            width: 100%;
-            height: auto;
-        }
-        
-        div.desc {
-            padding: 15px;
+        h1,
+        h2 {
+            font-weight: bold;
             text-align: center;
-        }
-        
-        .topnav a {
-            float: left;
-            display: block;
-            background-color: orange;
-            text-align: center;
-            padding: 12px 14px;
-            text-decoration: none;
         }
         
         footer {
-            text-align: center;
+            color: green;
+            padding: 20px;
             background-color: black;
-            color: white;
         }
         
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: black;
-            color: white;
+        .footer-content {
             text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-content form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: green;
+        }
+        
+        .footer-content input {
+            padding: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        .footer-content button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: darkorange;
+            color: green;
+            cursor: pointer;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: green;
+        }
+        
+        .footer-links div {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links h5 {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            text-decoration: none;
+            color: olive;
+        }
+        
+        footer p {
+            text-align: center;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .instagram {
+            padding: 50px;
+            text-align: center;
+        }
+        
+        .instagram {
+            background-color: green;
+        }
+        
+        .insta-images {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .insta-images img {
+            margin: 10px;
+            width: 100px;
+            height: auto;
         }
     </style>
 </head>
@@ -127,106 +244,134 @@
         <a href="contact.html">CONTACTS</a>
     </div>
 </div>
-<div class="topnav" style="background-color:darkorange;padding: 12px 14px;">
-    <center><b>Our Gallery</b></center>
+<div class="topnav" style="background-color:black;padding: 12px 14px;color:green;">
+    <center>Explore Our Gallery</center>
 </div>
 
-<div class="gallery">
-    <a target="_blank" href="corn39.jpg">
-        <img src="corn39.jpg" alt="corn39.jpg" width="600" height="500">
-    </a>
-</div>
+<body>
+    <header>
+        <h1 style="font-size:45px; color:green;">READY FOR ADVENTURE?</h1>
+        <p style="color:green;">Explore Our Maize Flour Creations:From Farm to Table</p>
+    </header>
+    <section class="gallery">
+        <div class="card">
+            <img src="corn39.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            <p></p>
+        </div>
+        <!-- Repeat similar structure for other cards -->
+        <div class="card">
+            <img src="corn33.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            <p></p>
 
-<div class="gallery">
-    <a target="_blank" href="corn33.jpg">
-        <img src="corn33.jpg" alt="corn33.jpg" width="800" height="500">
-    </a>
-</div>
+        </div>
+        <div class="card">
+            <img src="corn34.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            <p></p>
 
-<div class="gallery">
-    <a target="_blank" href="corn34.jpg">
-        <img src="corn34.jpg" alt="corn34.jpg" width="800" height="500">
-    </a>
-</div>
+        </div>
+        <div class="card">
+            <img src="corn15.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            <p></p>
 
-<div class="gallery">
-    <a target="_blank" href="corn15.jpg">
-        <img src="corn15.jpg" alt="corn15.jpg" width="800" height="500">
-    </a>
-</div>
+        </div>
+        <div class="card">
+            <img src="corn20.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            <p></p>
 
-<div class="gallery">
-    <a target="_blank" href="corn20.jpg">
-        <img src="corn20.jpg" alt="corn20.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn41.jpg">
-        <img src="corn41.jpg" alt="corn41.jpg" width="600" height="400">
-    </a>
+        </div>
+        <div class="card">
+            <img src="corn41.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            <p></p>
 
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn30.jpg">
-        <img src="corn30.jpg" alt="corn30.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn31.jpg">
-        <img src="corn31.jpg" alt="corn31.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn40.jpg">
-        <img src="corn40.jpg" alt="corn40.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn37.jpg">
-        <img src="corn37.jpg" alt="corn37.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn38.jpg">
-        <img src="corn38.jpg" alt="corn38.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn12.jpg">
-        <img src="corn12.jpg" alt="corn12.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn32.jpg">
-        <img src="corn32.jpg" alt="corn15.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn13.jpg">
-        <img src="corn13.jpg" alt="corn13.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn14.jpg">
-        <img src="corn14.jpg" alt="corn14.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn35.jpg">
-        <img src="corn35.jpg" alt="corn35.jpg" width="600" height="400">
-    </a>
-</div>
-<div class="gallery">
-    <a target="_blank" href="corn36.jpg">
-        <img src="corn36.jpg" alt="corn36.jpg" width="600" height="400">
-    </a>
-</div>
+        </div>
+        <div class="card">
+            <img src="corn30.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            .</p>
 
+        </div>
+        <div class="card">
+            <img src="corn40.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+            <p></p>
 
+        </div>
+        <div class="card">
+            <img src="corn37.jpg" alt="">
+            <h3 style="color:green">Quality you can taste!</h3>
+        </div>
+    </section>
+    <section class="instagram">
+        <h2 style="color:white;">Follow us on the gram! @oryx_premium_ke
+        </h2>
+        <div class="insta-images">
+            <img src="corn35.jpg" alt="Instagram Image">
+            <img src="corn37.jpg" alt="Instagram Image">
+            <img src="corn39.jpg" alt="Instagram Image">
+            <img src="corn40.jpg" alt="Instagram Image">
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <h4>Sign Up </h4>
+            <form>
+                <input type="email" placeholder="mailto@youremail.com">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="brands.html">Brands</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Service</h5>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h5>Social Media</h5>
+                <ul>
+                    <li><a href="#">FaceBook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Linked In</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 style>Reach Out To Us</h5>
+                <ul>
+                    <li><a href="#">Telephone</a></li>
+                    <li><a href="#">Email</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024-KML | All Right Reserved</p>
+    </footer>
 </body>
-<footer>
-    <p>&copy;2024 -Kilimambogo Millers Ltd -All Rights Reserved -Terms & Conditions</p>
-    </p>
-</footer>
 
 </html>
