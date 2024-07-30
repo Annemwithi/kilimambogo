@@ -229,6 +229,23 @@
             margin: 0;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
+        
+        .image-row {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+        
+        .column img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
     </style>
 </head>
 
@@ -291,6 +308,15 @@
             </div>
         </div>
     </section>
+    <h2 style="color:green; text-align:center;">MAIN OUTLETS</h2>
+    <div class="image-row">
+        <div class="column">
+            <img src="outlet1.jpg" alt="">
+        </div>
+        <div class="column">
+            <img src="outlet 2.jpg" alt="">
+        </div>
+    </div>
     <section class="testimonials ">
         <h2 style="color:green ">Testimonials</h2>
         <p>Our customers love our maize flour. See what they have to say:</p>
