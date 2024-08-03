@@ -353,3 +353,20 @@ body {
     flex-direction: row;
     width: 100%;
 }
+
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
